@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <style>
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #dde1e7;
+    font-size: 2rem;
+    font-family: Georgia, serif;
+}
+
+h1 {
+    padding: 5px;
+    background-color:rgba(180, 215, 235, 0.288);
+    color: black;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+h4{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    color: black;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    position: fixed;
+	border-right:none;
+}
+
+/* Left Part */
+#details {
+    position: fixed;
+    height: 500px;
+    width: 47%;
+    border-right: 3px solid rgb(43, 171, 226);
+    margin-top: 30px;
+    padding: 3%;
+    padding: 40px;
+    margin-left: 30px;
+    font-size: 1.2rem;
+}
+
+input {
+    border-radius: 10px;
+    padding: 10px;
+    height: 1.7rem;
+    margin-top: 10px;
+    height: fit-content;
+    margin-left: 30px;
+    color: solid black;
+}
+
+input:focus {
+    outline-color: rgb(100, 203, 237);
+}
+
+input[type=file]::file-selector-button {
+    background-color:wheat;
+    color: rgb(255, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+input[type=file]::file-selector-button:hover {
+    background-color: rgb(20, 22, 22);
+    color: #9cc5e1;
+    border: 2px solid #1e8feb;
+}
+
+.width {
+    width: 70%;
+    padding-left: 5px;
+}
+
+label {
+    text-decoration: underline;
+}
+
+.radios label {
+    text-decoration: none;
+}
+
+.boxes label {
+    text-decoration: none;
+}
+
+#clear {
+    float: right;
+    background-color: rgb(37, 155, 210);
+}
+
+.buttons {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+}
+
+button {
+    width: 40%;
+    border-radius: 7px;
+    background-color:black  ;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 500;
+}
+
+button:hover {
+    background-color:red;
+    color: aquamarine;
+    border: 2px solid rgb(18, 5, 5);
+}
+h4:hover{
+    color: black;
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+#inp_male {
+    accent-color: blue;
+}
+
+#inp_female {
+    accent-color: blue;
+}
+
+.checkbox {
+    accent-color: blue;
+}
+
+.head {
+    font-weight: 900;
+}
+
+.radios {
+    margin-left: 100px;
+}
+
+.boxes {
+    margin-left: 100px;
+}
+
+/* Right Box */
+
+#output {
+    position: absolute;
+    width: 80%;
+    height: 450px;
+    padding: 20px;
+    border: radius 20px;
+   
+    float: right;
+    margin-left: 50px;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.right {
+    right: 0;
+}
+
+.left {
+    left: 0;
+}
+#output::-webkit-scrollbar {
+    width: 15px;
+}
+
+#output::-webkit-scrollbar-thumb {
+    background-color: #334e49;
+    border-radius: 20px;
+   }
+
+.data {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.info {
+    overflow-wrap: break-word;
+    border: 1px solid black;
+    width: 70%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.image {
+    border: 2px solid black;
+    width: 50%;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background-position: center;
+    background-size: cover;
+}
+
+img {
+    height: 200px;
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+</style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Student Enrollment Form</h1>
+        
+
+        <div class="container left">
+            <div id="details">
+                <label for="inp_name" class="head">Name:</label>
+                <input type="text" name="name" id="inp_name" class="width clr_inp" placeholder="Enter Name">
+                <br>
+		
+		<label for="inp_name" class="head">Contact:</label>
+                <input type="number" name="name" id="inp_contact" class="width clr_inp" placeholder="Enter Number">
+                <br>
+
+		<label for="inp_name" class="head">DOB:</label>
+                <input type="date" name="name" id="inp_DOB" class="width clr_inp" placeholder="Enter date">
+                <br>
+
+
+                <label for="inp_email" class="head">Email:</label>
+                <input type="email" name="email" id="inp_email" class="width clr_inp" placeholder="Enter email">
+                <br>
+
+                <label for="inp_img" class="head">Image:</label>
+                <input type="file" name="img" id="inp_img" accept="image/*" class="clr_inp">
+                <br>
+
+                <label for="gender" class="head">Gender:</label>
+                <div class="radios">
+                    <input type="radio" name="gender" id="inp_male" value="Male" class="gender"><label
+                        for="inp_male">Male</label><br>
+                    <input type="radio" name="gender" id="inp_female" value="Female" class="gender"><label
+                        for="inp_female">Female</label><br>
+                    <input type="radio" name="gender" id="inp_Other" value="Other" class="gender"><label
+                        for="inp_female">other</label>
+                </div>
+                <br>
+
+                <label for="skills" class="head">Skills:</label>
+                <div class="boxes">
+                    <input type="checkbox" name="C" id="inp_c" class="checkbox" value="C"><label
+                        for="imp_C">C</label>
+                        <input type="checkbox" name="C++" id="inp_c++" class="checkbox" value="C++"><label
+                        for="imp_C++">C++</label>
+                    <input type="checkbox" name="HTML" id="inp_html" class="checkbox" value="HTML"><label
+                    for="imp_html">HTML</label>
+                    <input type="checkbox" name="CSS" id="inp_css" class="checkbox" value="CSS"><label
+                    for="imp_css">CSS</label>
+		     <input type="checkbox" name="JavaScript" id="inp_JavaScript" class="checkbox" value="CSS"><label
+                    for="imp_css">JavaScript</label>
+                    
+                </div>
+                <br>
+
+                <div class="buttons">
+                    <button type="submit" id="submit">Enroll</button>
+                    <button id="clear">CLEAR</button>
+                </div>
+
+            </div>
+           <div class="container right">
+  <h4 style="font-size:30px;text-alignment:center;">Registered Students</h4>
+  <div id="output">
+
+  </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+        <script>
+let output = document.getElementById("output");
+let name = document.getElementById("inp_name");
+let contact = document.getElementById("inp_contact");
+
+let DOB = document.getElementById("inp_DOB");
+let email = document.getElementById("inp_email");
+let img = document.getElementById("inp_img");
+let gender = document.getElementsByClassName("gender");
+let checkbox = document.getElementsByClassName("checkbox");
+let submit = document.getElementById("submit");
+let clear = document.getElementById("clear");
+let clr_inp = document.getElementsByClassName("clr_inp");
+
+let img_src;
+
+img.addEventListener("change", function () {
+    let img_reader = new FileReader();
+    img_reader.addEventListener("load", function () {
+        img_src = img_reader.result;
+    })
+    img_reader.readAsDataURL(this.files[0]);
+})
+
+submit.onclick = function () {
+    let flag = 1;
+    for (i = 0; i < document.querySelectorAll("input").length; i++) {
+        if (document.querySelectorAll("input")[i].value == "") {
+            flag = 0
+            break;
+        }
+    }
+    if (flag == 0)
+        alert("All fields must be filled");
+    else {
+        let data = document.createElement("div");
+        let image = document.createElement("div");
+        let info = document.createElement("div");
+        data.className = "data";
+        image.className = "image";
+        info.className = "info";
+
+        let selected;
+        for (i = 0; i < gender.length; i++) {
+            if (gender[i].checked == true) {
+                selected = gender[i].value;
+            }
+        }
+
+        let skillbox = "";
+        for (j = 0; j < checkbox.length; j++) {
+            if (checkbox[j].checked == true) {
+                skillbox += checkbox[j].value + ',';
+            }
+        }
+
+
+        info.innerHTML = "<p>Name : " + name.value + "</p><p>Email : " + email.value + "</p><p>Gender : " + selected + "</p><p>Skills : " + skillbox + "</p>";
+
+        image.innerHTML = '<img src="' + img_src + '">';
+
+        output.appendChild(data);
+        data.appendChild(info);
+        data.appendChild(image);
+    }
+}
+
+clear.onclick = function () {
+    for (i = 0; i < clr_inp.length; i++) {
+        clr_inp[i].value = "";
+    }
+    for (i = 0; i < gender.length; i++) {
+        gender[i].value = "";
+    }
+    for (i = 0; i < checkbox.length; i++) {
+        checkbox[i].value = "";
+    }
+}
+</script>
+</body>
+
+</html>
